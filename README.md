@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub repo](https://github.com/prmditya/FM03-news-homepage)
-- Live Site URL: [GitHub page](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://news-homepage-prmdtya.vercel.app/)
 
 ## My process
 
