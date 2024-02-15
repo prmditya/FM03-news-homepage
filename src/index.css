@@ -1,0 +1,311 @@
+:root {
+  --secondary: hsl(3, 86%, 64%);
+  --text: hsl(240, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+}
+
+p {
+  font-size: 13px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+main {
+  max-width: 1100px;
+  margin: 32px 0;
+  padding: 0 15px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+.show-overlay {
+  opacity: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f5f5f5;
+  padding: 54px 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links > a {
+  text-decoration: none;
+  color: hsl(0, 0%, 40%);
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 200ms ease-in-out;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+.nav-menu {
+  display: none;
+}
+
+.btn-nav {
+  width: 50px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border-radius: 49%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 27px;
+  transform: translateX(-100%);
+  z-index: 1001; /* Increase the z-index value to place it on top */
+}
+
+.nav-mobile-menu {
+  position: fixed;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  transform: translateX(40%) translateX(100%);
+  background: #f5f5f5;
+  height: 100vh;
+  flex-direction: column;
+  z-index: 10;
+  transition: all 700ms ease-in-out;
+}
+
+.nav-mobile-menu a {
+  color: var(--text);
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.nav-mobile-menu a {
+  display: inline-block;
+}
+
+article {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 71px;
+}
+
+.hero {
+  display: grid;
+  max-width: 730px;
+}
+
+.hero-cta {
+  display: flex;
+  margin: 16px 0;
+  gap: 24px;
+}
+
+.hero-cta h1 {
+  font-size: 54px;
+  font-weight: 1000;
+}
+
+.hero-about {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 5px;
+  padding-right: 20px;
+}
+
+.hero-about p {
+  line-height: 1.5;
+  font-size: 15px;
+  color: #777679;
+}
+
+.hero button {
+  width: 185px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border: none;
+  background-color: var(--secondary);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.newlist {
+  width: 352px;
+  height: 100%;
+  padding: 30px 24px;
+  background-color: var(--text);
+}
+
+.newlist h2,
+.newlist h3,
+.newlist p {
+  color: white;
+}
+
+.newlist h2 {
+  color: #eaa752;
+  font-size: 2rem;
+}
+
+.newlist h3 {
+  margin-top: 36px;
+}
+
+.newlist p {
+  margin-top: 13px;
+  margin-bottom: 36px;
+  font-weight: 200;
+  color: hsl(0, 0%, 80%);
+}
+
+.newlist hr {
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 51px;
+}
+
+.featured-card {
+  display: flex;
+}
+
+.featured-card picture {
+  margin-right: 23px;
+}
+
+.featured-card img {
+  width: 100px;
+  height: 133px;
+}
+
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.featured-card h4 {
+  color: #c2c0c5;
+  font-size: 32px;
+}
+
+.featured-card strong {
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  padding-top: 30px;
+}
+
+footer p {
+  color: #777679;
+}
+
+footer a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--secondary);
+}
+
+.show {
+  transform: translateX(40%);
+}
+
+@media screen and (max-width: 768px) {
+  .overlay {
+    display: block;
+  }
+
+  main {
+    max-width: 700px;
+    padding-bottom: 30px;
+    margin: 10px 0;
+  }
+
+  nav {
+    padding: 20px 0;
+  }
+
+  nav img {
+    width: 50px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+
+  article {
+    flex-direction: column;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-cta h1 {
+    font-size: 36px;
+  }
+
+  .hero button {
+    margin-top: 30px;
+  }
+
+  .newlist {
+    width: 100%;
+  }
+
+  .featured {
+    grid-template-columns: 1fr;
+    margin-bottom: 21px;
+  }
+}
